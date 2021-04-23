@@ -23,16 +23,48 @@ if(isset($_POST['ajouter_etudiant'])) {
     $CIN = htmlspecialchars($_POST['CIN']);
     $image = $_FILES['image']['name'];
     $upload="";
+    /****************************/
     if (!empty($_POST['nom']) and !empty($_POST['prenom']) and !empty($_POST['CIN']) and !empty($_POST['age']) and !empty($_POST['section']) and !empty($_FILES['image']['name'])) {
-        $insetetud = $bdd->prepare("INSERT INTO etudiants(CIN,nom,prenom,section,age,image) VALUES (?,?,?,?,?,?)") ;
-        $insetetud->execute(array($CIN, $nom, $prenom, $section, $age, $image));
-        $erreur="l'etudiant a bien été ajouté";
+
+        if(isset($_FILES['image'])&& !empty($_FILES['image']['name'])){
+            $image = $_FILES['image']['name'];
+            $taillemax = 2097152; //2 Moctet
+            $extensionsValides = array('jpg','jpeg','gif','png');
+            if ($_FILES['image']['size']<=$taillemax)
+            {
+                $extensionUpload= strtolower(substr(strrchr($image,'.'),1));//valider extension
+                if(in_array($extensionUpload,$extensionsValides)){
+                    $chemin="Etudiants".$image;
+                    //echo $chemin;
+                    //$chemin="C:\Users\raoua\OneDrive\Bureau\GL2 sem2\dev web\tp-php\exercice\tuto_php\Etudiants";
+                    $resultat=move_uploaded_file($_FILES['image']['tmp_name'],$chemin);
+                    if($resultat)
+                    {
+                        $i=$image/*.".".$extensionUpload*/;
+                        $insetetud = $bdd->prepare("INSERT INTO etudiants(CIN,nom,prenom,section,age,image) VALUES (?,?,?,?,?,?)") ;
+                        $insetetud->execute(array($CIN, $nom, $prenom, $section, $age, $i));
+                        $erreur="l'etudiant a bien été ajouté";
+                    }
+                    else
+                    {
+                        $erreur="erreur durant l'importation de l'image";
+                    }
+                }
+                else{
+                    $erreur='votre image doit etre au format adequat';
+                }
+            }
+            else
+            {
+                $erreur="Votre photo de profil ne doit pas depasser 2 Moctets";
+            }
+        }
     }
     else{
         $erreur = "tous les champs doivent etre completes";
     }
 }
-
+        /***************************/
 
 //supprimer etudiant
 
@@ -42,12 +74,13 @@ if( isset($_GET['delete']))
     $requete->execute(array($_GET['delete']));
 
 }
-
+        /***************************/
 //afficher liste eudiants
 $req="select * from etudiants;";
 $resultat=$bdd->query($req);
 $res=$resultat->fetchAll(PDO::FETCH_OBJ);
 //modifier etudiant
+
 
 ?>
 
@@ -63,9 +96,8 @@ $res=$resultat->fetchAll(PDO::FETCH_OBJ);
 </head>
 <body>
 
-    <table>
-        <tr>
-            <td>
+
+
                 <table class="table table-dark table-striped">
                     <thead>
                     <td>CIN</td> <td>nom</td> <td>prenom</td> <td>age</td> <td>section</td> <td>image</td> <td> </td> <td> </td>
@@ -77,21 +109,31 @@ $res=$resultat->fetchAll(PDO::FETCH_OBJ);
                             <td><?php echo $ligne->prenom?></td>
                             <td><?php echo $ligne->age ?></td>
                             <td><?php echo $ligne->section ?></td>
-                            <td><?php echo $ligne->image ?></td>
+                            <td> <img width="30" src="Etudiants<?php echo $ligne->image ?>"/> </td>
+
                             <td>
-                                <a name="modifier" href="index.php?edit=<?php echo $ligne->CIN ; ?>"
+                                <a name="modifier" href="modifier.php?edit=<?php echo $ligne->CIN ; ?>"
                                    class="btn btn-info">Modifier</a>
                             </td>
                             <td>
                                 <a href="index.php?delete=<?php echo $ligne->CIN ; ?>"
-                                   class="btn btn-info">Supprimer</a>
+                                   class="btn btn-info"><img src=""/>Supprimer</a>
                             </td>
                         </tr>
+
                         <?php
                     }
                     ?>
-                </table></td> <!--afficherEtudiant-->
-            <td align="center"><div align="center">
+
+                </table>
+
+
+                    <button  align="center" type="submit" name="ajouter" class="btn btn-primary"><a href="ajouter.php" style="color: azure">Ajouter</a></button>
+
+
+
+            <!--afficherEtudiant-->
+         <!--   <td align="center"><div align="center">
                     <form method="post" action="" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">NOM : </label>
@@ -125,10 +167,8 @@ $res=$resultat->fetchAll(PDO::FETCH_OBJ);
                         echo $erreur;
                     }
                     ?>
-                </div></td><!--ajouterEtudiant-->
-
-        </tr>
-    </table>
+                </div>
+            </td>--><!--ajouterEtudiant-->
 
 </body>
 </html>
