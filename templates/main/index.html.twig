@@ -1,0 +1,194 @@
+{% extends 'layout.html.twig' %}
+{% block contenue %}
+
+    {% block header%}
+        <!-- présentation-->
+        <section >
+            <div class="parallex img-rounded" id="presentation">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/projects/project1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/projects/project2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/projects/project3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- -->
+    {% endblock %}
+
+
+    <section class="section-wrapper">
+        <div class="projets">
+             <img src="images/projects/projet1.jpg">
+        </div>
+    </section>
+    <section >
+        <div class="parallex" id="produits">
+            <p>Bonjour et bienvenue sur mon site !
+                Ceci est mon premier test alors soyez indulgents s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
+
+            <p>Pour l'instant c'est un peu vide, mais revenez dans 2-3 jours quand j'aurai appris un peu plus de choses, je vous assure que vous allez être surpris !</p>
+        </div>
+    </section>
+    <!-- -->
+
+    <!--Acceuil Section-->
+    <section class="section-wrapper" id="acceuil">
+
+    </section>
+    <!--End Acceuil Section-->
+
+
+    <!--Presentation Section-->
+    <section class="section-wrapper" id="presentation">
+
+
+    </section>
+    <!--End Presentation Section-->
+
+    <!--just trying>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset("images/projects/project1.jpg") }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset("images/projects/project1.jpg") }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset("images/projects/project1.jpg") }}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!End try-->
+
+
+
+    <!--Projets Section-->
+    <section class="section-wrapper" id="projects">
+        <!--  Title -->
+        <div class="page-title">
+            <h2> Nos Projets</h2>
+        </div>
+        <!-- End  Title -->
+
+        <div class="d-flex justify-content-evenly" id="product-project-index">
+            <div class="p-2 bd-highlight card" style="width: 18rem;">
+                <img src="{{ asset("images/projects/project1.jpg") }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card with stretched link</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+            <div class="p-2 bd-highlight card" style="width: 18rem;">
+                <img src="{{ asset("images/projects/project1.jpg") }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card with stretched link</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+            <div class="p-2 bd-highlight card" style="width: 18rem;">
+                <img src="{{ asset("images/projects/project1.jpg") }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card with stretched link</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!--  See more -->
+        <div class="see-more">
+            <button type="button" class="btn btn-outline-primary">Afficher plus</button>
+        </div>
+        <!-- End see more -->
+
+    </section>
+    <!--End Projet Section-->
+
+    <!--Produits Section-->
+    <section class="section-wrapper" id="produits">
+        <!--  Title -->
+        <div class="page-title">
+            <h2> Nos Produits</h2>
+        </div>
+
+        <!-- End  Title -->
+        <div class="d-flex justify-content-evenly" id="product-project-index">
+            <div class="p-2 bd-highlight card" style="width: 18rem;">
+                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card with stretched link</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+            <div class="p-2 bd-highlight card" style="width: 18rem;">
+                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card with stretched link</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+            <div class="p-2 bd-highlight card" style="width: 18rem;">
+                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card with stretched link</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+            <div class="p-2 bd-highlight card" style="width: 18rem;">
+                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card with stretched link</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <!--  See more -->
+        <div class="d-grid gap-2 col-md-6 mx-auto">
+            <button type="button" class="btn btn-outline-primary">Afficher plus</button>
+        </div>
+        <!-- End see more -->
+
+    </section>
+    <!--End Produits Section-->
+
+{% endblock  %}
