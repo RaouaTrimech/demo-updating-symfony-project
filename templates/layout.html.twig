@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/jpg" href="{{ asset("images/logo.png") }}"/>
     {% block stylesheet %}
         <!--Bootstrap link-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -13,6 +16,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css">
         <link rel="stylesheet" href="{{asset("style.css")}}">
         <link rel="stylesheet" href="{{asset("projectDisplay.css")}}">
+
     {% endblock %}
     <title>
         {% block title %}
@@ -63,66 +67,110 @@
 
 
 
-        <!-- Footer -->
-        <section id="footer">
-            <!-- Contacter+Footer-->
 
-            <div id="end-page">
-                <!--  Contact Section -->
-                <section class="section-wrapper" id="contacts" style="background-color: #2e3136">
-                    <!-- Contact Title -->
-                    <div class="page-title">
-                        <h2>Contacter Nous</h2>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Société MAM
+                        </h6>
+
+                        <div>
+                            <img src="{{ asset("images/logo.png") }}" alt="logo-de-la-société-MAM" width="400" height="300">
+                        </div>
+
                     </div>
-                    <!-- End Contact Title -->
-                    <!-- Contacts -->
-                    <div class="container" >
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Local
+                        </h6>
                         <div class="row">
-                            <div class="col">
-                                <div >
-                                    <img class="img-contacter"  src="{{ asset("images/logo.png") }}">
+                             <img src="{{ asset("images/logos/google maps.png") }}"   alt="gmaps" style="margin: 0 auto">
+
+                        </div>
+                        <div class="row">
+                            <br>
+                            LOT 75,ZONE INDUSTRIELLE CHOTRANA 2,2036,LA SOUKRA,ARIANA,TUNISIE.
+                        </div>
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="{{ asset("images/logos/gmail-email-mail.png") }}"  alt="email"style="margin: 0 auto">
                                 </div>
+                                <div class="col-8">
+                                    :mam@topnet.tn
+                                    <br>
+                                </div>
+
                             </div>
-                            <div class="col">
-                                <p>
-                                    Nous rendre visite:
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="{{ asset("images/logos/icon telephone.png") }}"  alt="telephone" style="margin: 0 auto">
+                                </div>
+                                <div class="col-8">
+                                    :+216 70 721 177
                                     <br>
-                                    Lot 75 zone industrielle
-                                    <br>
-                                    Chotrana 2,2036, La Sokra
-                                    <br>
-                                    Ariana, Tunisie
-                                </p>
+                                </div>
+
                             </div>
-                            <div class="col">
-                                Nos Horaires:
-                                Lundi-Vendredi: 7H-17H
-                            </div>
-                            <div class="col">
-                                <p>
-                                    <strong> Nos Cordonnées: </strong>
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="{{ asset("images/logos/fax.png") }}" alt="fax" style="margin: 0 auto">
+                                </div>
+                                <div class="col-8">
+                                    :+216 70 721 173
                                     <br>
-                                    Tél:+216 70 721 177
-                                    <br>
-                                    Mail: mam@topnet.tn
-                                    <br>
-                                </p>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                    <!-- End Contacts -->
 
-                </section>
-                <!-- End Contact Section -->
-            </div>
-            <div class="bottom-footer " >
-                <div class="container">
-                    <div class="bottom-footer-left wow fadeInUp" data-wow-duration="1s" data-wow-delay="450ms" style="height:0.5px;">
-                        <p><span>&#169; Copyright 2021 MaM by</span>  AmaniFatmaFatmaRaoua </p>
+
                     </div>
+                    <!-- Grid column -->
                 </div>
+                <!-- Grid row -->
             </div>
         </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">amani_fatma_fatma_raoua</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
         <!-- End Footer -->
 
 

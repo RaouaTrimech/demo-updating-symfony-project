@@ -3,6 +3,7 @@
 
     {% block header%}
         <!-- présentation-->
+        <!--
         <section >
             <div class="parallex img-rounded" id="presentation">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -33,162 +34,132 @@
                 </div>
             </div>
         </section>
-        <!-- -->
+        -->
+        <!--
+        <video src="https://www.youtube.com/embed/l2RhcADFFZA?controls=0&amp;start=20" ></video>
+-->
     {% endblock %}
+ <section >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="embed-responsive embed-responsive-16by9 ">
+
+                <video autoplay loop muted  style="z-index: -1;">
+                    <source src="{{ asset("videos/videointro.mp4") }}" type="video/mp4">
+                </video>
+
+                <div  class="row Conttext " style="z-index: 10;position: absolute; top:60% ; left:40%;border: 0.5px;">
+                    <h1 style="color: white;">Société MAM</h1>
+                   <!--<p class="text">Société MAM</p>-->
+                </div>
 
 
-    <section class="section-wrapper">
-        <div class="projets">
-             <img src="images/projects/projet1.jpg">
-        </div>
-    </section>
-    <section >
-        <div class="parallex" id="produits">
-            <p>Bonjour et bienvenue sur mon site !
-                Ceci est mon premier test alors soyez indulgents s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
 
-            <p>Pour l'instant c'est un peu vide, mais revenez dans 2-3 jours quand j'aurai appris un peu plus de choses, je vous assure que vous allez être surpris !</p>
-        </div>
-    </section>
-    <!-- -->
-
-    <!--Acceuil Section-->
-    <section class="section-wrapper" id="acceuil">
-
-    </section>
-    <!--End Acceuil Section-->
-
-
-    <!--Presentation Section-->
-    <section class="section-wrapper" id="presentation">
-
-
-    </section>
-    <!--End Presentation Section-->
-
-    <!--just trying>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset("images/projects/project1.jpg") }}" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset("images/projects/project1.jpg") }}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset("images/projects/project1.jpg") }}" class="d-block w-100" alt="...">
-            </div>
+
+
+
+
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-    <!End try-->
+</section>
 
-
-
-    <!--Projets Section-->
-    <section class="section-wrapper" id="projects">
-        <!--  Title -->
-        <div class="page-title">
-            <h2> Nos Projets</h2>
-        </div>
-        <!-- End  Title -->
-
-        <div class="d-flex justify-content-evenly" id="product-project-index">
-            <div class="p-2 bd-highlight card" style="width: 18rem;">
-                <img src="{{ asset("images/projects/project1.jpg") }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card with stretched link</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+    <section class="section-wrapper" id="about">
+        <div class="about-us">
+            <div class="why-us">
+                <div class="container">
+                    <div class="row">
+                        <!-- Block Title -->
+                        <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">
+                            <h1><span>ABOUT XLIGHT</span></h1>
+                        </div>
+                        <div class="element-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+                            <h1>Why Choose Us ?</h1>
+                            <h3>We Are Crazy <span class="main-color">Web Agency</span> Who Thinks To Change The <span class="main-color">Future</span></h3>
+                        </div>
+                        <!-- End Block Title -->
+                        <!-- About Us Icons -->
+                        <div class="wrapper-why-us">
+                            <div class="col-lg-4 col-sm-4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+                                <i class="hovicon effect-1 sub-a"><b class="fa fa-flask"></b></i>
+                                <h2>CREATIVE TEAM</h2>
+                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="450ms">
+                                <i class="hovicon effect-1 sub-a"><b class="fa fa-heart-o"></b></i>
+                                <h2>MODERN DESIGN</h2>
+                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+                                <i class="hovicon effect-1 sub-a"><b class="fa fa-tablet"></b></i>
+                                <h2>RESPONSIVE THEME</h2>
+                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                            </div>
+                        </div>
+                        <!-- End About Us Icons -->
+                    </div>
                 </div>
             </div>
-            <div class="p-2 bd-highlight card" style="width: 18rem;">
-                <img src="{{ asset("images/projects/project1.jpg") }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card with stretched link</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                </div>
-            </div>
-            <div class="p-2 bd-highlight card" style="width: 18rem;">
-                <img src="{{ asset("images/projects/project1.jpg") }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card with stretched link</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+        </div>
+        <!-- End About Xlight -->
+
+
+        <!-- Facts -->
+        <div class="facts parallax">
+            <div class="overlay">
+                <div class="wrapper-block-facts">
+                    <div class="container">
+                        <div class="row">
+                            <div class="element-title">
+                                <h1 class="main-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Some Fun Facts</h1>
+                                <h3 class="white-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">Lorem Ipsum is simply dummy text of the printing and typesetting</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="wrapper-number">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+                                        <p class="timer" data-from="0" data-to="612" data-speed="2000">612</p>
+                                    </div>
+                                    <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+                                        CUPS OF COFFEE
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="450ms">
+                                        <p class="timer" data-from="0" data-to="432" data-speed="2000">432</p>
+                                    </div>
+                                    <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="450ms">
+                                        HAPPY CLIENTS
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">
+                                        <p class="timer" data-from="0" data-to="957" data-speed="2000">957</p>
+                                    </div>
+                                    <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+                                        SONG LISTENED
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="750ms">
+                                        <p class="timer" data-from="0" data-to="8912" data-speed="2000">8912</p>
+                                    </div>
+                                    <div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="750ms">
+                                        ROWS OF CODE
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--  See more -->
-        <div class="see-more">
-            <button type="button" class="btn btn-outline-primary">Afficher plus</button>
-        </div>
-        <!-- End see more -->
+        <!-- End Facts -->
 
     </section>
-    <!--End Projet Section-->
+    <section>
+    hellllloooooo
 
-    <!--Produits Section-->
-    <section class="section-wrapper" id="produits">
-        <!--  Title -->
-        <div class="page-title">
-            <h2> Nos Produits</h2>
-        </div>
-
-        <!-- End  Title -->
-        <div class="d-flex justify-content-evenly" id="product-project-index">
-            <div class="p-2 bd-highlight card" style="width: 18rem;">
-                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card with stretched link</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                </div>
-            </div>
-            <div class="p-2 bd-highlight card" style="width: 18rem;">
-                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card with stretched link</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                </div>
-            </div>
-            <div class="p-2 bd-highlight card" style="width: 18rem;">
-                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card with stretched link</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                </div>
-            </div>
-            <div class="p-2 bd-highlight card" style="width: 18rem;">
-                <img src="{{ asset("images/products/coulissant.jpg") }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card with stretched link</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <!--  See more -->
-        <div class="d-grid gap-2 col-md-6 mx-auto">
-            <button type="button" class="btn btn-outline-primary">Afficher plus</button>
-        </div>
-        <!-- End see more -->
-
-    </section>
-    <!--End Produits Section-->
-
+</section>
 {% endblock  %}

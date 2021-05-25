@@ -1,0 +1,31 @@
+.highlight-projet-impaire{
+    color: #313437;
+    background-color: #eef4f7;
+    padding: 50px 0 55px;
+    overflow: hidden;
+
+}
+
+.highlight-projet-paire{
+    color: #858b8d;
+    background-color: lightgrey;
+    padding: 50px 0 55px;
+    overflow: hidden;
+
+}
+.img_project {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5%;
+}
+.nom_proj > p{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4em;
+    font-family: "Dancing Script";
+    color:darkred;
+    padding-top: 50%;
+
+
+}

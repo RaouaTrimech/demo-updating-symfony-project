@@ -1,0 +1,72 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Hello ListeProjetController!{% endblock %}
+
+{% block body %}
+    {% block header %}
+        <link rel="stylesheet" href="{{asset("projectList.css")}}">
+        <style>
+            .nomprojet{
+                font-size: 2em;
+                font-family: 'Dancing Script', cursive;
+                position: center;
+                margin: auto;
+                text-space: 0.5;
+                padding-left: 50em;
+                margin-left: 0px;
+            }
+        </style>
+    {% endblock %}
+
+    {% block contenue %}
+    <!--    <div class="container-fluid">
+            <div class="row">
+                <div class="col nomprojet">
+                    nom du projet
+                </div>
+                <div class="col imageprojet">
+                    <img src="{{ asset("images/projects/project2.jpg") }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+
+        </div>
+        -->
+        {% set i=0 %}
+        {% for pro in project %}
+            <br>
+                {%if (i%2==0) %}
+                    <section class="highlight-projet-paire">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col nom_proj animate__fadeIn">
+                                    <p>{{ pro.getNomProjet() }}</p>
+                                </div>
+                                <div class="col-8 animate__fadeIn">
+                                    <img src="{{ asset("images/projects/project2.jpg") }}" class="img_project">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </section>
+                {% else %}
+                    <section class="highlight-projet-impaire ">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-8 animate__fadeIn">
+                                    <img src="{{ asset("images/projects/project2.jpg") }}" class="img_project">
+                                </div>
+
+                                <div class="col nom_proj animate__fadeIn">
+                                    <p>{{ pro.getNomProjet() }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </section>
+                {% endif%}
+            {% set i=i+1 %}
+        {% endfor %}
+    {% endblock %}
+
+{% endblock %}
+
