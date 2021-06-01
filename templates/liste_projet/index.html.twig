@@ -34,7 +34,8 @@
         {% set i=0 %}
         {% for pro in project %}
             <br>
-                {%if (i%2==0) %}
+                {% if (i%2==0) %}
+                {#  % if ({{ loop.index }}%2==0) %#}
                     <section class="highlight-projet-paire">
                         <div class="container-fluid">
                             <div class="row">
